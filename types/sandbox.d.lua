@@ -3,7 +3,7 @@
 ---A sandbox repository to test BlueLua CI/CD workflow.
 ---@class BlueluaSandbox
 local M = {
-  _VERSION = "sandbox 0.0.0", -- x-release-please-version
+  _VERSION = "sandbox 0.1.0", -- x-release-please-version
 }
 
 ---Adds two numbers together.

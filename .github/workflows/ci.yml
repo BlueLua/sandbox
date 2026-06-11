@@ -10,15 +10,15 @@ on:
       linux:
         description: "Linux"
         type: boolean
-        default: false
+        default: true
       macos:
         description: "macOS"
         type: boolean
-        default: false
+        default: true
       windows:
         description: "Windows"
         type: boolean
-        default: false
+        default: true
       stylua:
         description: "StyLua"
         type: boolean
@@ -52,6 +52,10 @@ on:
         type: boolean
         default: false
 
+permissions:
+  contents: write
+  pull-requests: write
+
 jobs:
   ci:
     uses: BlueLua/.github/.github/workflows/ci.yml@main
@@ -72,4 +76,3 @@ jobs:
       release-please:  ${{ inputs.release-please  || false }}
       publish-dev:     ${{ inputs.publish-dev     || false }}
       publish-release: ${{ inputs.publish-release || false }}
-
